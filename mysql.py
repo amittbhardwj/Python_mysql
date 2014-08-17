@@ -21,9 +21,8 @@ db = MySQLdb.connect("localhost", "amit", "amitt", "cpp")
 cur = db.cursor()
 
 # Prepare SQL query to INSERT a record into the database.
-sql = "INSERT INTO PROGRAM(Value1, Value2, Greater) \
-           VALUES ('%d', '%d', '%d' )" % \
-           (value1, value2, greater)
+sql = """INSERT INTO PROGRAM1(Value1, Value2, Greater) \
+          VALUES ('%d', '%d', '%d' )" % (value1, value2, greater)"""
 try:
     # Execute the SQL command
         cur.execute(sql)
